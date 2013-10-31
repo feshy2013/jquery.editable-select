@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>jQuery插件jquery.editable-select可输入的下拉框</title>
+<script src="../src/js/jquery.js" ></script>
+<script src="../src/js/jquery.editable-select.js" ></script>
+<link  rel="stylesheet"  type="text/css"  href="../src/css/jquery.editable-select.css"/>
+</head>
+<body>
+     <div>
+         <label  for="name" >未过滤的用户名</label>
+         <select name="drpPublisher"  id="drpPublisher"  class="Winstar-input120">
+
+			<option value="3734">amo12</option>
+		
+			<option value="3726">adddd</option>
+		
+			<option value="3719">assss</option>
+		
+			<option value="3697">atiyu</option>
+		
+			<option value="3689">aasss</option>
+		
+			<option value="3677">atian</option>
+		
+			<option value="3667">aminn</option>
+		
+			<option value="3662">aljsl</option>
+		
+			<option value="3652">acoco</option>
+		
+			<option value="3623">annnn</option>
+		
+			<option value="3616">ahhhh</option>
+		
+			<option value="3603">al1l1</option>
+		
+			<option value="3602">aluih</option>
+		
+			<option value="3564">aguil</option>
+		
+			<option value="3561">aconi</option>
+		
+			<option value="3553">aahhh</option>
+		
+			<option value="3549">asmqk</option>
+		
+			<option value="3547">aalan</option>
+		
+			<option value="3540">aadsf</option>
+		
+			<option value="3539">acgw1</option>
+		
+			<option value="3535">ade12</option>
+		
+			<option value="3533">a1015</option>
+		
+			<option value="3531">a1014</option>
+		
+			<option value="3529">ahhkk</option>
+		
+			<option value="3522">ahlhl</option>
+		
+			<option value="3509">awalo</option>
+		
+			<option value="3501">aqxxl</option>
+		
+			<option value="3474">akadr</option>
+		
+			<option value="3473">aread</option>
+		
+			<option value="3469">ajgtm</option>
+		
+			<option value="3460">adoff</option>
+		
+			<option value="3417">awawa</option>
+		
+			<option value="3403">akaka</option>
+		
+			<option value="3398">asoso</option>
+		
+			<option value="3361">adodo</option>
+		
+			<option value="3359">aqtds</option>
+		
+			<option value="3357">ajkjk</option>
+		
+			<option value="3316">akkkk</option>
+		
+			<option value="3301">addfg</option>
+		
+			<option value="3289">asoft</option>
+		
+			<option value="3281">afghy</option>
+		
+			<option value="3241">arain</option>
+		
+			<option value="3236">affgg</option>
+		
+			<option value="3225">afgef</option>
+		
+			<option value="3223">adfge</option>
+		
+			<option value="1036">adssy</option>
+		
+			<option value="1035">adsa1</option>
+		
+			<option value="1034">ace00</option>
+		
+			<option value="1033">abcd2</option>
+		
+			<option value="1032">abcd1</option>
+		
+			<option value="1031">a8181</option>
+		       		 		
+		       		 	
+		       </select>
+		       <label for="name" >选中的值</label> <input  type="text"  id="ddd" />
+       </div>
+       <div>
+         <label for="name" >过滤之后的用户名</label>
+         <select  name = "drpPublisher2"  id = "drpPublisher2"  class = "Winstar-input120" >
+             <option value="3225">afgef</option>
+		
+			<option value="3223">adfge</option>
+		
+			<option value="1036">adssy</option>
+		
+			<option value="1035">adsa1</option>
+		
+			<option value="1034">ace00</option>
+		
+			<option value="1033">abcd2</option>
+		
+			<option value="1032">abcd1</option>
+		
+			<option value="1031">a8181</option>
+         </select>
+         <label for="name" >选中的值</label> <input  type="text"  id="ddd2" />
+       </div>
+       
+       
+      
+</body>
+<script  type="text/javascript" >
+$(function() {
+   $('#drpPublisher').editableSelect(
+     {
+       bg_iframe: true,
+       onSelect: function(list_item) {
+         // 'this' is a reference to the instance of EditableSelect
+         // object, so you have full access to everything there
+         $('#ddd').val(this.text.val());
+       },
+       case_sensitive: false, // If set to true, the user has to type in an exact
+                              // match for the item to get highlighted
+       items_then_scroll: 10 ,// If there are more than 10 items, display a scrollbar
+       isFilter:false //If set to true, the item will be filtered according to the matching criteria.
+     }
+   );
+   $('#drpPublisher2').editableSelect(
+     {
+       bg_iframe: true,
+       onSelect: function(list_item) {
+         // 'this' is a reference to the instance of EditableSelect
+         // object, so you have full access to everything there
+         $('#ddd2').val(this.text.val());
+       },
+       case_sensitive: false, // If set to true, the user has to type in an exact
+                              // match for the item to get highlighted
+       items_then_scroll: 10 ,// If there are more than 10 items, display a scrollbar
+       isFilter:true //If set to true, the item will be filtered according to the matching criteria.
+     }
+   );
+});
+</script>
+</html>
